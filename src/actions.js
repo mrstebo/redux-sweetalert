@@ -11,7 +11,7 @@ export function removeModal(id) {
   return {
     type: t.REMOVE_MODAL,
     payload: id
-  }
+  };
 }
 
 export function clearAll() {
