@@ -1,0 +1,44 @@
+{
+  "name": "redux-sweetalert",
+  "version": "1.0.0",
+  "description": "Redux SweetAlert",
+  "main": "./lib/index.js",
+  "scripts": {
+    "compile": "./node_modules/.bin/babel -d lib/ src/",
+    "test": "npm run compile && mocha --compilers js:babel-core/register --colors",
+    "version:patch": "npm version patch",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrstebo/redux-sweetalert.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "sweetalert"
+  ],
+  "author": {
+    "name": "Steven Atkinson",
+    "email": "mrstebouk@gmail.com",
+    "url": "https://mrstebo.co.uk/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrstebo/redux-sweetalert/issues"
+  },
+  "homepage": "https://github.com/mrstebo/redux-sweetalert#readme",
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-eslint": "^7.0.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-stage-0": "^6.16.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.8.1",
+    "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "uuid": "^2.0.3"
+  }
+}
