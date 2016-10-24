@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- 5.1.0
+deploy:
+  provider: npm
+  email: mrstebouk@gmail.com
+  api_key:
+    secure: HivnVmNqh5pzCMKfFCxtx2rHqZ5cB1OS28zTlGD2cqTlxoFp40QWWKtGcn//XrJqIDD25XbTBiSLXwPukLtMzHRwRylcLoPd53jbNFF+ostpiyXX+HdMA8MXjkbyug7Iq3tih8+wtcGpUYrYxbDUKwD2BOaygdO00cItIRYw+tOW0hb3rLzW0fF4efYHN8pe9vS2J6EBqlq0OukEehLJVxwDodiTImnFdLVzW+ozBSKuyDb70xeYv0p4Fy8m8GpaW1jnUq4GEULbklSKsBdBraoEZwIR0OQdhxq22DkTxcyScsYEa/igH9AHZBdjuRN8MOEDs7CGKmuQ3XJqSxp9mMNf+yySFMsUAnINGi/EyAG2jMqYHte2ayA/CY9HwmIXp+dcpVEhw0181hSyluCgPkv4ETnBkeY2Tm8B+cK/FWyyNK/tg45K5hPm85t6YGoxFGvBm7SrXDrbjEgfqzfTDNhgsSo8BJaHJYK9RoeSZCWuWFSTFBI4+aBuTO3E3O4zgyqh2VOCDZAvO5J58wJWz2a6uyFTVusKoocBTurxvqhCwxenwhOmlSl8WPPLRtGbi7sr9I6cFotWCja+12e/LX/qhmESb8rnVvByMHTwFR2+oMEiqCP9VUTVQwHsmPU4if2dXerHj6KTxpx54drT5Iv8iPTwoDzErq/d4qFe9NQ=
+  on:
+    tags: true
+    repo: mrstebo/redux-sweetalert
