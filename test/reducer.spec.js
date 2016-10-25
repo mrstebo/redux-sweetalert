@@ -4,57 +4,33 @@ import reducer from '../lib/reducer';
 
 describe('reducer', () => {
   it('should have an initial state', () => {
-    expect(reducer(undefined, {})).to.deep.equal({
-      modals: []
-    });
+    expect(reducer(undefined, {})).to.deep.equal({});
   });
 
-  it('should add a modal when ADD_MODAL is dispatched', () => {
-    const modal = {id: '1', text: 'Test Modal'};
+  it('should show a modal when SHOW_MODAL is dispatched', () => {
+    const modal = {text: 'Test Modal'};
     expect(reducer(undefined, {
-      type: t.ADD_MODAL,
+      type: t.SHOW_MODAL,
       payload: modal
     })).to.deep.equal({
-      modals: [modal]
+      modal: {
+        ...modal,
+        show: true
+      }
     });
   });
 
-  it('should remove a modal when REMOVE_MODAL is dispatched', () => {
-    const modal1 = {
-      id: '1',
-      text: 'Test Modal'
-    };
-    const modal2 = {
-      id: '2',
-      text: 'Test Modal'
-    };
+  it('should hide a modal when HIDE_MODAL is dispatched', () => {
+    const modal = {show: true, text: 'Test Modal'};
     const initialState = {
-      modals: [modal1, modal2]
+      modal
     };
     expect(reducer(initialState, {
-      type: t.REMOVE_MODAL,
-      payload: '1'
+      type: t.HIDE_MODAL
     })).to.deep.equal({
-      modals: [modal2]
-    });
-  });
-
-  it('should clear all modals when CLEAR_ALL is dispatched', () => {
-    const modal1 = {
-      id: '1',
-      text: 'Test Modal'
-    };
-    const modal2 = {
-      id: '2',
-      text: 'Test Modal'
-    };
-    const initialState = {
-      modals: [modal1, modal2]
-    };
-    expect(reducer(initialState, {
-      type: t.CLEAR_ALL
-    })).to.deep.equal({
-      modals: []
+      modal: {
+        show: false
+      }
     });
   });
 });

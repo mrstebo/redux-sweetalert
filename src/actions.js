@@ -1,21 +1,14 @@
 import * as t from './actionTypes';
 
-export function addModal(payload) {
+export function showModal(payload) {
   return {
-    type: t.ADD_MODAL,
+    type: t.SHOW_MODAL,
     payload
   };
 }
 
-export function removeModal(id) {
+export function hideModal() {
   return {
-    type: t.REMOVE_MODAL,
-    payload: id
-  };
-}
-
-export function clearAll() {
-  return {
-    type: t.CLEAR_ALL
+    type: t.HIDE_MODAL
   };
 }

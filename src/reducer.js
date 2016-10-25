@@ -1,31 +1,24 @@
-import uuid from 'uuid';
 import {createReducer}  from './utils.js';
 import * as t from './actionTypes';
 
-const initialState = {
-  modals: []
-};
+const initialState = {};
 
 export default createReducer(initialState, {
-  [t.ADD_MODAL]: (state, payload) => {
+  [t.SHOW_MODAL]: (state, payload) => {
     return {
       ...state,
-      modals: [
-        ...state.modals,
-        {
-          id: uuid.v1(),
-          ...payload
-        }
-      ]
+      modal: {
+        ...payload,
+        show: true
+      }
     };
   },
-  [t.REMOVE_MODAL]: (state, id) => {
+  [t.HIDE_MODAL]: (state) => {
     return {
       ...state,
-      modals: state.modals.filter(modal => modal.id !== id)
+      modal: {
+        show: false
+      }
     };
-  },
-  [t.CLEAR_ALL]: () => {
-    return initialState;
   }
 });
