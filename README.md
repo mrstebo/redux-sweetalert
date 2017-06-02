@@ -3,4 +3,6 @@
 [![dependencies](https://david-dm.org/mrstebo/redux-sweetalert.svg)](https://david-dm.org/mrstebo/redux-sweetalert)
 
 # redux-sweetalert
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/mrstebo/redux-sweetalert.svg)](https://greenkeeper.io/)
 Using SweetAlert with React and Redux
