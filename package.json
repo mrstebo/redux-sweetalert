@@ -48,6 +48,6 @@
     "sweetalert-react": "^0.4.4"
   },
   "dependencies": {
-    "eventemitter3": "^2.0.2"
+    "eventemitter3": "^3.0.0"
   }
 }
