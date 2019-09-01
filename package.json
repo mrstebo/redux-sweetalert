@@ -7,7 +7,7 @@
     "lint": "./node_modules/.bin/eslint src",
     "prebuild": "npm run lint",
     "build": "./node_modules/.bin/babel -d lib/ src/",
-    "test": "npm run build && mocha --compilers js:babel-core/register --colors",
+    "test": "npm run build && mocha --require babel-core/register --colors",
     "version:patch": "npm version patch",
     "prepare": "npm run build"
   },
@@ -41,7 +41,7 @@
     "eslint": "^6.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-react": "^7.0.1",
-    "mocha": "^5.0.1",
+    "mocha": "^6.0.0",
     "react": "^16.3.0",
     "react-redux": "^7.0.0",
     "redux": "^3.6.0",
