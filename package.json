@@ -7,7 +7,7 @@
     "lint": "./node_modules/.bin/eslint src",
     "prebuild": "npm run lint",
     "build": "./node_modules/.bin/babel -d lib/ src/",
-    "test": "npm run build && mocha --compilers js:babel-core/register --colors",
+    "test": "npm run build && mocha --require babel-core/register --colors",
     "version:patch": "npm version patch",
     "prepare": "npm run build"
   },
